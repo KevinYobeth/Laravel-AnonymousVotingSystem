@@ -75,9 +75,20 @@
             <h1>{{ $userdata->name }}</h1>
             <form action="/voted" method="POST">
                 @csrf
-                <input type="image" id="voting" value="red" src="/img/1.jpg" height="300">
-                <input type="image" id="voting" value="red" src="/img/2.jpg" height="300">
-                <input type="image" id="voting" value="red" src="/img/3.PNG" height="300">
+                <input disabled type="image" id="voting" value="1" src="/img/1.jpg" height="300">
+                <input disabled type="image" id="voting" value="2" src="/img/2.jpg" height="300">
+                <input disabled type="image" id="voting" value="3" src="/img/3.PNG" height="300">
+                <br>
+                <label for="balon">Balon:</label>
+                <select id="balon" name="balon">
+                    <option value="-">-</option>
+                    <option value="1">Klif Pisang</option>
+                    <option value="2">Klif Pengajar</option>
+                    <option value="3">Kevin Yobeth</option>
+                </select>
+
+                <button type="submit">Submit</button>
+
             </form>
 
         </div>

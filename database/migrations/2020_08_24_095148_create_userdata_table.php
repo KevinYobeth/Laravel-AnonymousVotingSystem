@@ -14,8 +14,11 @@ class CreateUserdataTable extends Migration
     public function up()
     {
         Schema::create('userdata', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
             $table->string('identification');
+            $table->integer('voted');
+            $table->timestamps();
         });
     }
 

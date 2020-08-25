@@ -63,6 +63,7 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
     </style>
 </head>
 
@@ -75,6 +76,7 @@
                 <label for="identification">NIM / Registered ID</label>
                 <input type="number" name="identification" id="identification">
                 <input type="submit" value="Vote Now">
+                <p>{{ session('mssg') }}</p>
             </form>
         </div>
     </div>

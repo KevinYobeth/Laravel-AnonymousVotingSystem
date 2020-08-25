@@ -71,7 +71,14 @@
     <div class="flex-center position-ref full-height">
 
         <div class="content">
-            Hello World
+            Your Hash
+            <h4>{{ $data->hash }}</h4>
+
+            Your Vote
+            <h4>{{ $data->vote }}</h4>
+
+            Your Name
+            <h4> {{ $identification }}</h4>
         </div>
 
     </div>
