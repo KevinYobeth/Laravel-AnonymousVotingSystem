@@ -16,7 +16,7 @@ class VoteController extends Controller
     {
 
         try {
-            $identification = request('identification');
+            $identification = request('identification');    
             $userdata = Userdata::where('identification', $identification)->firstOrFail();
             $request->session()->put('identification', $identification);
 

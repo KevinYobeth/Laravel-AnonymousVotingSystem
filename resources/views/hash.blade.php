@@ -71,29 +71,14 @@
     <div class="flex-center position-ref full-height">
 
         <div class="content">
+            Your Hash
+            <h4>{{ $data->hash }}</h4>
 
-            <h1>{{ $userdata->name }}</h1>
-            <form action="{{ route('voted.store') }}" method="POST">
-                @csrf
-                <input disabled type="image" id="voting" value="1" src="{{ asset('/img/1.jpg') }}"
-                    height="300">
-                <input disabled type="image" id="voting" value="2" src="{{ asset('/img/2.jpg') }}"
-                    height="300">
-                <input disabled type="image" id="voting" value="3" src="{{ asset('/img/3.PNG') }}"
-                    height="300">
-                <br>
-                <label for="balon">Balon:</label>
-                <select id="balon" name="balon">
-                    <option value="-">-</option>
-                    <option value="1">Klif Pisang</option>
-                    <option value="2">Klif Pengajar</option>
-                    <option value="3">Kevin Yobeth</option>
-                </select>
+            Your Vote
+            <h4>{{ $data->vote }}</h4>
 
-                <button type="submit">Submit</button>
-
-            </form>
-
+            Timestamp
+            <h4>{{ $data->created_at }}</h4>
         </div>
 
     </div>

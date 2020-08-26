@@ -71,11 +71,16 @@
     <div class="flex-center position-ref full-height">
 
         <div class="content">
-            <form action="/vote" method="POST">
+            <form action="{{ route('vote.store') }}" method="POST">
                 @csrf
                 <label for="identification">NIM / Registered ID</label>
                 <input type="number" name="identification" id="identification">
                 <input type="submit" value="Vote Now">
+
+                <br>
+                <br>
+                <a style="text-decoration: none; color: #636b6f"
+                    href="{{ route('check.index') }}">Check Hash</a>
                 <p>{{ session('mssg') }}</p>
             </form>
         </div>
